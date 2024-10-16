@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra São Miguel, Açores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f3ff;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0077be;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .gallery-item-content {
+            padding: 15px;
+        }
+        h2 {
+            color: #005a8c;
+        }
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .comment-form button {
+            background-color: #0077be;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Descubra São Miguel, Açores</h1>
+    </header>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="lagoa_sete_cidades.jpg" alt="Lagoa das Sete Cidades">
+                <div class="gallery-item-content">
+                    <h2>Lagoa das Sete Cidades</h2>
+                    <p>Uma das mais belas paisagens dos Açores, com duas lagoas gêmeas, uma azul e outra verde. Ideal para caminhadas e ciclismo, oferecendo vistas deslumbrantes do miradouro da Vista do Rei[1].</p>
+                </div>
+                <div class="comment-section">
+                    <form class="comment-form">
+                        <textarea placeholder="Deixe seu comentário"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="furnas.jpg" alt="Furnas">
+                <div class="gallery-item-content">
+                    <h2>Furnas</h2>
+                    <p>Famosa por suas fumarolas e águas termais, Furnas é o local perfeito para relaxar em banhos quentes e provar o tradicional cozido das Furnas, um prato cozinhado no calor vulcânico[1].</p>
+                </div>
+                <div class="comment-section">
+                    <form class="comment-form">
+                        <textarea placeholder="Deixe seu comentário"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="ponta_delgada.jpg" alt="Ponta Delgada">
+                <div class="gallery-item-content">
+                    <h2>Ponta Delgada</h2>
+                    <p>Capital da ilha, Ponta Delgada combina arquitetura histórica com uma cena cultural vibrante. Visite as Portas da Cidade, explore o Mercado da Graça e desfrute da gastronomia local nos restaurantes à beira-mar[1].</p>
+                </div>
+                <div class="comment-section">
+                    <form class="comment-form">
+                        <textarea placeholder="Deixe seu comentário"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
