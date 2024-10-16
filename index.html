@@ -64,6 +64,53 @@
     </style>
 </head>
 <body>
+
+    
+
+<div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Obtém o modal
+        var modal = document.getElementById("imageModal");
+
+        // Obtém a imagem do modal
+        var modalImg = document.getElementById("modalImage");
+
+        // Obtém todas as imagens da galeria
+        var images = document.querySelectorAll('.gallery-item img');
+
+        // Adiciona um evento de clique a cada imagem
+        images.forEach(function(img) {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Obtém o elemento <span> que fecha o modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Quando o usuário clica em <span> (x), fecha o modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Fecha o modal quando o usuário clica fora da imagem
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+    
+    
+    
     <header>
         <h1>Descubra São Miguel, Açores</h1>
     </header>
