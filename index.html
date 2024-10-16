@@ -45,6 +45,7 @@
             height: 200px;
             object-fit: cover;
             transition: opacity 0.3s ease;
+            cursor: pointer;
         }
         .gallery-item:hover img {
             opacity: 0.8;
@@ -61,56 +62,43 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-
-    
-
-<div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <script>
-        // Obtém o modal
-        var modal = document.getElementById("imageModal");
-
-        // Obtém a imagem do modal
-        var modalImg = document.getElementById("modalImage");
-
-        // Obtém todas as imagens da galeria
-        var images = document.querySelectorAll('.gallery-item img');
-
-        // Adiciona um evento de clique a cada imagem
-        images.forEach(function(img) {
-            img.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        });
-
-        // Obtém o elemento <span> que fecha o modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // Quando o usuário clica em <span> (x), fecha o modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // Fecha o modal quando o usuário clica fora da imagem
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-
-
-    
-    
-    
     <header>
         <h1>Descubra São Miguel, Açores</h1>
     </header>
@@ -130,7 +118,7 @@
                     <img src="sete-cidades-lagoa-vista-do-rei-2.jpg" alt="Lagoa das Sete Cidades">
                     <div class="gallery-item-content">
                         <h3>Lagoa das Sete Cidades</h3>
-                        <p> Lagoa das Sete Cidades do Miradouro da Vista do Rei</p>
+                        <p>Lagoa das Sete Cidades do Miradouro da Vista do Rei</p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -147,35 +135,58 @@
                         <p>O impressionante miradouro Grota do Inferno ou Boca do Inferno</p>
                     </div>
                 </div>
-
- <div class="gallery-item">
-                    <img src="devassa-sendero-desvío-mirador-pico-do-paul-1.jpg" alt="desvío-mirador-pico-do-paul">
+                <div class="gallery-item">
+                    <img src="devassa-sendero-desvío-mirador-pico-do-paul-1.jpg" alt="desvío-mirador-pico-do-paul">
                     <div class="gallery-item-content">
                         <h3>Desvio para o miradouro do Pico do Paúl</h3>
                         <p>Desvio para o miradouro do Pico do Paúl</p>
                     </div>
                 </div>
-
-
- <div class="gallery-item">
+                <div class="gallery-item">
                     <img src="acueducto-muro-nove-janelas-1.jpg" alt="Muro das 9 Janelas">
                     <div class="gallery-item-content">
                         <h3>Muro das 9 Janelas</h3>
                         <p>Aqueduto e o Muro das 9 Janelas</p>
                     </div>
                 </div>
-
-                
- <div class="gallery-item">
+                <div class="gallery-item">
                     <img src="sete-cidades-miradouro-cerrado-das-freiras.jpg" alt="Miradouro Cerrado das Freiras">
                     <div class="gallery-item-content">
                         <h3>Miradouro Cerrado das Freiras</h3>
                         <p>Sete Cidades desde o Miradouro Cerrado das Freiras</p>
                     </div>
                 </div>
-                
             </div>
         </section>
     </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var closeBtn = document.getElementsByClassName("close")[0];
+        var images = document.querySelectorAll('.gallery-item img');
+
+        images.forEach(function(img) {
+            img.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
