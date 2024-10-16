@@ -111,8 +111,9 @@
             </div>
         </section>
 
-        <section id="tourist-attractions">
-            <h2>Pontos Turísticos a Visitar</h2>
+        <!-- Zona 1 -->
+        <section id="tourist-attractions-zone1">
+            <h2>Pontos Turísticos a Visitar - Zona 1</h2>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="sete-cidades-lagoa-vista-do-rei-2.jpg" alt="Lagoa das Sete Cidades">
@@ -128,6 +129,13 @@
                         <p>Lagoa do Canário</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Zona 2 -->
+        <section id="tourist-attractions-zone2">
+            <h2>Pontos Turísticos a Visitar - Zona 2</h2>
+            <div class="gallery">
                 <div class="gallery-item">
                     <img src="grota-do-inferno-1.jpg" alt="Grota do Inferno">
                     <div class="gallery-item-content">
@@ -136,7 +144,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="devassa-sendero-desvío-mirador-pico-do-paul-1.jpg" alt="desvío-mirador-pico-do-paul">
+                    <img src="devassa-sendero-desvío-mirador-pico-do-paul-1.jpg" alt="desvío-mirador-pico-do-paul">
                     <div class="gallery-item-content">
                         <h3>Desvio para o miradouro do Pico do Paúl</h3>
                         <p>Desvio para o miradouro do Pico do Paúl</p>
@@ -149,6 +157,13 @@
                         <p>Aqueduto e o Muro das 9 Janelas</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Zona 3 -->
+        <section id="tourist-attractions-zone3">
+            <h2>Pontos Turísticos a Visitar - Zona 3</h2>
+             <div class="gallery">
                 <div class="gallery-item">
                     <img src="sete-cidades-miradouro-cerrado-das-freiras.jpg" alt="Miradouro Cerrado das Freiras">
                     <div class="gallery-item-content">
@@ -156,37 +171,46 @@
                         <p>Sete Cidades desde o Miradouro Cerrado das Freiras</p>
                     </div>
                 </div>
-            </div>
-        </section>
+             </div> 
+         </section>
+
     </div>
 
+    <!-- Modal para imagem ampliada -->
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
+    <!-- Script para funcionalidade do modal -->
     <script>
         var modal = document.getElementById("imageModal");
         var modalImg = document.getElementById("modalImage");
         var closeBtn = document.getElementsByClassName("close")[0];
+        
+        // Obtém todas as imagens da galeria
         var images = document.querySelectorAll('.gallery-item img');
 
+        // Adiciona um evento de clique a cada imagem
         images.forEach(function(img) {
-            img.onclick = function() {
-                modal.style.display = "flex";
-                modalImg.src = this.src;
-            }
-        });
+           img.onclick = function() {
+               modal.style.display = "flex";
+               modalImg.src = this.src; // Define a imagem no modal
+           }
+       });
 
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
+       // Fecha o modal ao clicar no botão 'X'
+       closeBtn.onclick = function() {
+           modal.style.display = "none";
+       }
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+       // Fecha o modal ao clicar fora da imagem
+       window.onclick = function(event) {
+           if (event.target == modal) {
+               modal.style.display = "none";
+           }
+       }
+   </script>
+
 </body>
 </html>
