@@ -43,13 +43,36 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .top-menu a:hover {
-            background-color: #005a8c; /* Cor ao passar o mouse */
-            transform: translateY(-2px); /* Efeito de elevação */
+            background-color: #005a8c;
+            transform: translateY(-2px);
         }
         .container {
             max-width: 1200px;
-            margin: 60px auto; /* Espaço para o menu fixo */
+            margin: 60px auto;
             padding: 20px;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .overlay-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
     </style>
 </head>
@@ -66,12 +89,10 @@
     <div class="container">
         <h2>Bem-vindo à Nova Página</h2>
 
- <div class="iframe-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTK-RX6agfOrRHt7qM4LS6-YszD7FNGMKlDpuLbnsXZi4aiS5KocOKC_vgStq8unsKjcQfM2KeTiecf/pubhtml?gid=643454147&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-        <a href="https://docs.google.com/spreadsheets/d/1I72KC86lr-bfsr7TwpLBLFaJw2EJJr5-HndHDyS4cSY/edit?usp=sharing" class="overlay-link" target="_blank"></a>
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTK-RX6agfOrRHt7qM4LS6-YszD7FNGMKlDpuLbnsXZi4aiS5KocOKC_vgStq8unsKjcQfM2KeTiecf/pubhtml?gid=643454147&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            <a href="https://docs.google.com/spreadsheets/d/1I72KC86lr-bfsr7TwpLBLFaJw2EJJr5-HndHDyS4cSY/edit?usp=sharing" class="overlay-link" target="_blank"></a>
+        </div>
     </div>
-        
-    </div>
-
 </body>
 </html>
