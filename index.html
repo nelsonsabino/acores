@@ -6,7 +6,7 @@
     <title>4 Dias em São Miguel, Açores</title>
      <link rel="icon" type="image/x-icon" href="https://nelsonsabino.github.io/roma/favicon.ico">
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             background-color: #e6f3ff;
             color: #333;
@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
         }
-                .top-menu {
+        .top-menu {
             position: fixed;
             top: 0;
             left: 0;
@@ -22,6 +22,7 @@
             background-color: #0077be;
             padding: 10px 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .top-menu ul {
             list-style-type: none;
@@ -31,16 +32,23 @@
         }
         .top-menu li {
             display: inline-block;
-            margin: 0 15px;
+            margin: 0 10px;
         }
         .top-menu a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .top-menu a:hover {
+            background-color: #005a8c; /* Cor ao passar o mouse */
+            transform: translateY(-2px); /* Efeito de elevação */
         }
         .container {
             max-width: 1200px;
-            margin: 60px auto 0;
+            margin: 60px auto 0; /* Espaço para o menu fixo */
             padding: 20px;
         }
         .gallery {
