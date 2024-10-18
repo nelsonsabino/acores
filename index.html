@@ -14,17 +14,34 @@
             margin: 0;
             padding: 0;
         }
-        header, section {
-            padding: 2em;
-        }
-        header {
+                .top-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             background-color: #0077be;
-            color: white;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .top-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             text-align: center;
+        }
+        .top-menu li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .top-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 60px auto 0;
+            padding: 20px;
         }
         .gallery {
             display: grid;
@@ -110,21 +127,20 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>4 Dias em São Miguel, Açores</h1>
-    </header>
+
+
+      <nav class="top-menu">
+        <ul>
+            <li><a href="#roteiro">Roteiro 4 dias</a></li>
+            <li><a href="#info">Informação importante</a></li>
+            <li><a href="#alojamento">Alojamento e deslocação</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+        </ul>
+    </nav>
+
+   
 
     <div class="container">
-
-
-        
-<!--        <section id="travel-and-accommodation">   -->
-<!--            <h2>Viagem e Alojamento</h2>          -->
-<!--            <div class="travel-info">             -->
-<!--                <p>03 de maio a 06 de maio. Aluguer de carrinha de 9 lugares + carro de 4 lugares à chegada</p>   -->
-<!--            </div>    -->
-<!--        </section>    -->
-
         
         <!-- OESTE -->
         <section id="tourist-attractions-zone1">
