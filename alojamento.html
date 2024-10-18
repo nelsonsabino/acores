@@ -49,9 +49,10 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding-top: 70px; /* Reduzido para 70px */
+            padding-top: 70px;
         }
         .iframe-container {
+            position: relative;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
@@ -60,6 +61,14 @@
             width: 100%;
             height: 800px;
             border: none;
+        }
+        .overlay-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
     </style>
 </head>
@@ -76,6 +85,7 @@
     <div class="container">
         <div class="iframe-container">
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTK-RX6agfOrRHt7qM4LS6-YszD7FNGMKlDpuLbnsXZi4aiS5KocOKC_vgStq8unsKjcQfM2KeTiecf/pubhtml?gid=643454147&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            <a href="https://docs.google.com/spreadsheets/d/1I72KC86lr-bfsr7TwpLBLFaJw2EJJr5-HndHDyS4cSY/edit?usp=sharing" class="overlay-link" target="_blank"></a>
         </div>
     </div>
 </body>
